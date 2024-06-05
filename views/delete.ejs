@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+<body>
+    <style>
+        .confirm{
+            height: 300px;
+            width:500px;
+            border: 5px;
+
+        }
+    </style>
+        <div class="topnav">
+                <a href="">New</a>
+                <a href="">Contact</a>
+                <a href="/create">create</a>
+                <a href="/">Home</a>
+            </div>
+        <div class="Confirm">
+            <form action="/delete" method="POST">
+            <h2 name="id">Are you sure delete</h2>
+            <input type="text" name="id" value="<%= ListUser.id  %>">
+            <input type="submit" value="Delete"></input>
+        </form>
+        </div>
+   
+</body>
+</head>

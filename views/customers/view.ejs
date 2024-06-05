@@ -1,0 +1,79 @@
+<div class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2"><%= customer.name  %> in <%= customer.city  %> City</h1>
+    <div class="btn-toolbar mb-2 mb-md 0">
+      <div class="btn-group me-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col py-3">
+  
+    <div class="row">
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+            <li class="breadcrumb-item active"><%= customer.name  %></li>
+          </ol>
+        </nav>
+      </div>
+      <div class="col text-end fw-lighter">
+        <b>Last Updated <%= new Date(customer.updated_at).toUTCString() %> </b>
+        <b name="id">UserId:</b> <%= customer.id %>
+      </div>
+    </div>
+  
+  </div>
+  
+  <ul class="list-group">
+  
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 160px"> <b>Name:</b></div>
+        <div class="col"><%= customer.name %></div>
+      </div>
+    </li>
+  
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 160px"> <b>Email</b></div>
+        <div class="col"><%= customer.email %></div>
+      </div>
+    </li>
+  
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 160px"> <b>City</b></div>
+        <div class="col"><%= customer.city %></div>
+      </div>
+    </li>
+  
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 160px"> <b>Telephone:</b></div>
+        <div class="col"><%= customer.telephone %></div>
+      </div>
+    </li>
+  
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 160px"> <b>Date Created:</b></div>
+        <div class="col"><%= customer.created_at %></div>
+      </div>
+    </li>
+  
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 160px"> <b>Date Modified:</b></div>
+        <div class="col"><%= customer.updated_at %></div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+      <div class="col" style="max-width: 160px"> <b>Customer Details: </b></div>
+      <div class="col"><%= customer.detail %></div>
+        </div>
+  </li>
+  </ul>
